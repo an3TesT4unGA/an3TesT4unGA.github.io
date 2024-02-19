@@ -1,0 +1,30 @@
+/* h1{
+    color:rgb(114, 18, 137);
+    text-decoration:line-through;
+    font-family: monospace;
+    font-size: 100px;
+    transition:all 0.2s;
+}
+
+h1:hover{
+    font-size: 120px;
+    color: darkmagenta;
+} */
+
+#outer{
+height:300px;
+background-color: blue;
+}
+
+#inner{
+height:50%;
+width: 50%;
+background-color: chocolate;
+padding: 20px;
+border:4px skyblue;
+}
+
+div{
+    height: 300px;
+    background-color: fuchsia;
+}
