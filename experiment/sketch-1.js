@@ -7,13 +7,14 @@ let grid = [];
 let gameOver = false;
 let clickedCells = [];
 let revealMode = true; // Flagging mode by default
+let revealButton, flagButton, restartButton;
 
 function setup() {
   createCanvas(cols * cellSize, rows * cellSize + 40); // Increased canvas height to accommodate buttons
   initializeGrid();
   placeMines(minesCount);
   calculateNumbers();
-  createButtons(); // Create flag and reveal buttons
+  createButtons(); // Create flag, reveal, and restart buttons
 }
 
 function draw() {
@@ -166,15 +167,48 @@ function isClicked(i, j) {
 }
 
 function createButtons() {
-  let revealButton = createButton('Reveal');
+  revealButton = createButton('Reveal');
   revealButton.position(10, rows * cellSize + 10);
   revealButton.mousePressed(() => {
     revealMode = true;
+    updateButtonStyles();
   });
 
-  let flagButton = createButton('Flag');
-  flagButton.position(revealButton.width + 20, rows * cellSize + 10);
+  flagButton = createButton('Flag');
+  flagButton.position(revealButton.position().x + revealButton.width + 10, rows * cellSize + 10);
   flagButton.mousePressed(() => {
     revealMode = false;
+    updateButtonStyles();
   });
+
+  restartButton = createButton('Restart');
+  restartButton.position(flagButton.position().x + flagButton.width + 10, rows * cellSize + 10);
+  restartButton.mousePressed(() => {
+    restartGame();
+  });
+
+  updateButtonStyles(); // Initially update button styles
+}
+
+function restartGame() {
+  gameOver = false;
+  grid = [];
+  clickedCells = [];
+  initializeGrid();
+  placeMines(minesCount);
+  calculateNumbers();
+}
+
+function updateButtonStyles() {
+  // Reset button styles
+  revealButton.style('background-color', '');
+  flagButton.style('background-color', '');
+  restartButton.style('background-color', '');
+
+  // Set active button style
+  if (revealMode) {
+    revealButton.style('background-color', 'pink');
+  } else {
+    flagButton.style('background-color', 'pink');
+  }
 }
