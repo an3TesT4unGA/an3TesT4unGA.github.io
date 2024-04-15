@@ -1,7 +1,7 @@
 from PIL import Image
 import random
 
-def cut_invert_and_flip(image_path, num_cuts=20):
+def cut_invert_and_flip(image_path, num_cuts=5000):
     with Image.open(image_path) as img:
         # Convert the image to RGB mode
         img = img.convert("RGB")
@@ -10,10 +10,10 @@ def cut_invert_and_flip(image_path, num_cuts=20):
         width, height = img.size
         
         # Specify the minimum and maximum width and height of the cut
-        min_cut_width = 30  # Adjust the minimum width for longer pieces vertically
-        max_cut_width = 60  # Adjust the maximum width for longer pieces vertically
-        min_cut_height = 600
-        max_cut_height = 900
+        min_cut_width = 20  # Adjust the minimum width for longer pieces vertically
+        max_cut_width = 20  # Adjust the maximum width for longer pieces vertically
+        min_cut_height = 20
+        max_cut_height = 100
         
         # Iterate through each cut
         for _ in range(num_cuts):
@@ -48,5 +48,5 @@ def cut_invert_and_flip(image_path, num_cuts=20):
     print("Cut, inverted, and flipped image saved as", output_path)
 
 if __name__ == "__main__":
-    image_path = "bolangerie.png"
+    image_path = "kiegelis.jpeg"
     cut_invert_and_flip(image_path)
