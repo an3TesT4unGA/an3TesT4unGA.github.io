@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <style>
-      /* div {
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    /* div {
         width: 100px;
         height: 100px;
       } */
 
-      /* .desktop {
+    /* .desktop {
         background: blue;
       }
 
@@ -23,52 +24,59 @@
         background: green;
       } */
 
-      .desktop {
+    .desktop {
+      display: block;
+    }
+
+    .tablet,
+    .phone {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .tablet {
         display: block;
       }
-      .tablet,
+
       .phone {
         display: none;
       }
 
-      @media (max-width: 768px) {
-        .tablet {
-          display: block;
-        }
-        .phone {
-          display: none;
-        }
-        .desktop {
-          display: none;
-        }
+      .desktop {
+        display: none;
+      }
+    }
+
+    @media (max-width: 425px) {
+      .tablet {
+        display: none;
       }
 
-      @media (max-width: 425px) {
-        .tablet {
-          display: none;
-        }
-        .phone {
-          display: block;
-        }
-        .desktop {
-          display: none;
-        }
+      .phone {
+        display: block;
       }
-    </style>
-  </head>
-  <body>
-    
-    <div class="desktop">
-      <img src="./Desktop.svg" alt="">
-    </div>
-    
-    <div class="tablet">
-      <img src="./Tablet.svg" alt="">
-    </div>
-    
-    <div class="phone">
-      <img src="./Phone.svg" alt="">
-    </div>
 
-  </body>
+      .desktop {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="desktop">
+    <img src="./Desktop.svg" alt="">
+  </div>
+
+  <div class="tablet">
+    <img src="./Tablet.svg" alt="">
+  </div>
+
+  <div class="phone">
+    <img src="./Phone.svg" alt="">
+  </div>
+
+</body>
+
 </html>

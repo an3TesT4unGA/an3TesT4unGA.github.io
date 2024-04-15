@@ -15,7 +15,7 @@ def apply_glitch(image_path):
         shifted_img += shift_amount
 
         # Clip the shifted image to ensure values stay within the uint8 range (0-255)
-        shifted_img = np.clip(shifted_img, 1, 255)
+        shifted_img = np.clip(shifted_img, 0, 255)
 
         # Convert back to image
         shifted_img = Image.fromarray(shifted_img)
