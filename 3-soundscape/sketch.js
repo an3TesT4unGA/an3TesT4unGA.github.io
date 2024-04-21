@@ -22,9 +22,10 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  textSize(48);
+  textSize(90);
   textAlign(CENTER);
   textStyle(BOLD);
+  fill("#4c3052");
 
   circleChainsawX = random(width);
   circleChainsawY = random(height);
@@ -37,14 +38,14 @@ function setup() {
 }
 
 function draw() {
-  background('hotpink');
+  background("#af86b8");
 
   // circle(circleChainsawX, circleChainsawY, 200);
   // circle(circleChickensX, circleChickensY, 200);
   // circle(circleWaterfallX, circleWaterfallY, 200);
 
   if (!userHasClicked) {
-    text('Click to start', width / 2, height / 2);
+    text('Find the Sounds', width / 2, height / 2);
   } else {
 
 
