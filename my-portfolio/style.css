@@ -51,8 +51,8 @@ footer {
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
     flex-direction: column; /* Vertical stacking */
-    height: calc(100vh - -700px); /* Ensures space for header and footer */
-    background-image: url('./images/Skatei-06.png'); /* Background image */
+    height: calc(100vh - -1400px); /* Ensures space for header and footer */
+    background-image: url('./images/background.jpg'); /* Background image */
     background-size: cover; /* Ensures the image covers the area */
     background-repeat: no-repeat; /* No repeating */
     background-position: center; /* Centered image */
@@ -70,8 +70,8 @@ footer {
 .scrollable-square {
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     border: 0px solid #000; /* Border for separation */
-    width: 500px; /* Fixed width */
-    height: 500px; /* Fixed height */
+    width: 700px; /* Fixed width */
+    height: 700px; /* Fixed height */
     padding: 10px; /* Padding inside the square */
     text-align: center; /* Centers content within the square */
     overflow: auto; /* Allows scroll if content exceeds */
