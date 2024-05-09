@@ -17,16 +17,23 @@ header {
     color: white; /* White text */
 }
 
+.logo img {
+    width: 50px; /* Adjust this value to control the width of the logo */
+    height: auto;
+}
 nav ul {
     list-style: none; /* No bullet points */
-    padding: 0;
+    padding: 50px;
     margin: 0;
     display: flex; /* Flexbox for horizontal layout */
     flex-direction: row; /* Ensures horizontal alignment */
-    gap: 20px; /* Space between navigation items */
+    gap: 60px; /* Space between navigation items */
 }
 
 nav a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
     color: white; /* White text for links */
     text-decoration: none; /* No underline */
     transition: color 0.3s; /* Smooth transition for hover */
@@ -68,7 +75,7 @@ footer {
 
 /* Scrollable squares with consistent size */
 .scrollable-square {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(185, 168, 186, 0.8); /* Semi-transparent white */
     border: 0px solid #000; /* Border for separation */
     width: 700px; /* Fixed width */
     height: 700px; /* Fixed height */
