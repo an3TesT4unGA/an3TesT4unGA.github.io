@@ -2,32 +2,28 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%; /* Ensures full height for Flexbox centering */
+    height: 100%; /* Full viewport height */
 }
 
 /* Header styles */
 header {
-    display: flex; /* Flexbox for alignment */
+    display: flex; /* Flexbox for layout */
+    flex-direction: row;
     justify-content: space-between; /* Space between logo and nav */
-    align-items: center; /* Vertical centering */
+    align-items: center; /* Vertical alignment */
     height: 60px; /* Consistent height */
-    padding: 10px 20px; /* Spacing within header */
-    background-color: rgba(0, 0, 0, 0.8); /* Dark header */
-    color: white; /* White text for contrast */
+    padding: 10px 20px; /* Spacing */
+    background-color: rgba(185, 168, 186); /* Dark header */
+    color: white; /* White text */
 }
 
-.logo img {
-    width: 50px; /* Size for the logo */
-    height: auto;
-}
-
-/* Navigation styles */
 nav ul {
     list-style: none; /* No bullet points */
     padding: 0;
     margin: 0;
     display: flex; /* Flexbox for horizontal layout */
-    gap: 20px; /* Spacing between nav items */
+    flex-direction: row; /* Ensures horizontal alignment */
+    gap: 20px; /* Space between navigation items */
 }
 
 nav a {
@@ -42,21 +38,11 @@ nav a:hover {
 
 /* Footer styles */
 footer {
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    background-color: rgba(185, 168, 186); /* Dark background */
     color: white; /* White text */
-    text-align: center; /* Centers text */
-    padding: 10px; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    padding: 10px; /* Padding */
     height: 60px; /* Consistent footer height */
-}
-
-footer a {
-    color: white; /* White link text */
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-footer a:hover {
-    color: lightgray; /* Hover effect */
 }
 
 /* Main background with Flexbox centering */
@@ -64,30 +50,30 @@ footer a:hover {
     display: flex; /* Flexbox for centering */
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
-    flex-direction: column; /* Stacks content vertically */
-    height: 100vh; /* Full viewport height */
-    background: url('images/background.jpg') no-repeat center center; /* Background image */
-    background-size: cover; /* Ensures background covers entire area */
-    padding-top: 60px; /* Space for header */
-    padding-bottom: 60px; /* Space for footer */
+    flex-direction: column; /* Vertical stacking */
+    height: calc(100vh - -700px); /* Ensures space for header and footer */
+    background-image: url('./images/Skatei-06.png'); /* Background image */
+    background-size: cover; /* Ensures the image covers the area */
+    background-repeat: no-repeat; /* No repeating */
+    background-position: center; /* Centered image */
+    padding: 20px; /* Additional padding for safety */
 }
 
 /* Centered content with Flexbox */
 .centered-content {
-    display: flex; /* Enables Flexbox */
-    flex-direction: column; /* Stacks content vertically */
-    gap: 30px; /* Space between squares */
-    width: 100%; /* Ensures full-width alignment */
+    display: flex; /* Flexbox enabled */
+    flex-direction: column; /* Vertical stacking */
+    gap: 30px; /* Spacing between squares */
 }
 
 /* Scrollable squares with consistent size */
 .scrollable-square {
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    border: 2px solid #000; /* Border for separation */
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
-    padding: 10px; /* Padding for internal space */
-    text-align: center; /* Centers content */
+    border: 0px solid #000; /* Border for separation */
+    width: 500px; /* Fixed width */
+    height: 500px; /* Fixed height */
+    padding: 10px; /* Padding inside the square */
+    text-align: center; /* Centers content within the square */
     overflow: auto; /* Allows scroll if content exceeds */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     margin: 0 auto; /* Centers horizontally */
