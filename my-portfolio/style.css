@@ -7,13 +7,19 @@ body, html {
 
 /* Header styles */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     display: flex; /* Flexbox for layout */
     flex-direction: row;
     justify-content: space-between; /* Space between logo and nav */
     align-items: center; /* Vertical alignment */
     height: 60px; /* Consistent height */
     padding: 10px 20px; /* Spacing */
-    background-color: rgba(185, 168, 186); /* Dark header */
+    background-color: rgb(171, 154, 172); /* Dark header */
     color: white; /* White text */
 }
 
@@ -40,25 +46,60 @@ nav a {
 }
 
 nav a:hover {
-    color: lightgray; /* Hover effect */
+    color: rgb(171, 154, 172); /* Hover effect */
 }
 
 /* Footer styles */
 footer {
-    background-color: rgba(185, 168, 186); /* Dark background */
+    display: flex; /* Flexbox for layout */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; /* Vertical alignment */
+    height: 60px; /* Consistent height */
+    padding: 10px 20px; /* Spacing */
+    background-color: rgb(171, 154, 172); /* Dark header */
     color: white; /* White text */
-    text-align: center; /* Centered text */
-    padding: 10px; /* Padding */
-    height: 60px; /* Consistent footer height */
+
+    list-style: none; /* No bullet points */
+    padding: 50px;
+    margin: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    flex-direction: row; /* Ensures horizontal alignment */
+    gap: 60px; /* Space between navigation items */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+footer a {
+    text-decoration: none;
+    color: white; 
+}
+
+footer a:hover {
+    transition: color 0.3s; /* Smooth transition for hover */
+    color: rgb(171, 154, 172); /* Hover effect */
+}
+
+p {
+    font-weight: 500;
 }
 
 /* Main background with Flexbox centering */
 .background {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
     display: flex; /* Flexbox for centering */
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
     flex-direction: column; /* Vertical stacking */
-    height: calc(100vh - -1400px); /* Ensures space for header and footer */
+    height: calc(100vh - -2500px); /* Ensures space for header and footer */
     background-image: url('./images/background.jpg'); /* Background image */
     background-size: cover; /* Ensures the image covers the area */
     background-repeat: no-repeat; /* No repeating */
@@ -70,15 +111,15 @@ footer {
 .centered-content {
     display: flex; /* Flexbox enabled */
     flex-direction: column; /* Vertical stacking */
-    gap: 30px; /* Spacing between squares */
+    gap: 100px; /* Spacing between squares */
 }
 
 /* Scrollable squares with consistent size */
 .scrollable-square {
-    background-color: rgba(185, 168, 186, 0.8); /* Semi-transparent white */
+    background-color: rgb(171, 154, 172); /* Semi-transparent white */
     border: 0px solid #000; /* Border for separation */
-    width: 700px; /* Fixed width */
-    height: 700px; /* Fixed height */
+    width: 1000px; /* Fixed width */
+    height: 1000px; /* Fixed height */
     padding: 10px; /* Padding inside the square */
     text-align: center; /* Centers content within the square */
     overflow: auto; /* Allows scroll if content exceeds */
