@@ -139,4 +139,11 @@ p {
     overflow: auto; /* Allows scroll if content exceeds */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     margin: 0 auto; /* Centers horizontally */
+    
+}
+
+.photo-image {
+    width: 80%; /* Ensures the image is smaller than the container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 150px; /* Limits the maximum width to avoid overflowing */
 }
