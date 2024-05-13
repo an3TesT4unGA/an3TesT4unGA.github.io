@@ -493,6 +493,8 @@ function triggerIncorrectPlacementConsequences() {
 
   // Play the selected scream sound
   randomScream.play();
+
+  
 }
 
 function playDrillingSound(tooth) {
