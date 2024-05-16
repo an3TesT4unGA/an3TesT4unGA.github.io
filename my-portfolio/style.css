@@ -63,6 +63,16 @@ nav a:hover {
     color: rgb(171, 154, 172); /* Hover effect */
 }
 
+.hamburger {
+    display: none; /* Initially hide the hamburger menu */
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
 /* Footer styles */
 footer {
     display: flex; /* Flexbox for layout */
@@ -113,7 +123,7 @@ p {
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
     flex-direction: column; /* Vertical stacking */
-    height: calc(100vh - -2500px); /* Ensures space for header and footer */
+    height: calc(100vh - -2000px); /* Ensures space for header and footer */
     background-image: url('./images/background.jpg'); /* Background image */
     background-size: cover; /* Ensures the image covers the area */
     background-repeat: no-repeat; /* No repeating */
@@ -132,18 +142,50 @@ p {
 .scrollable-square {
     background-color: rgb(171, 154, 172); /* Semi-transparent white */
     border: 0px solid #000; /* Border for separation */
-    width: 1000px; /* Fixed width */
-    height: 1000px; /* Fixed height */
-    padding: 10px; /* Padding inside the square */
+    width: 800px; /* Fixed width */
+    height: 800px; /* Fixed height */
+    padding: 20px; /* Padding inside the square */
     text-align: center; /* Centers content within the square */
     overflow: auto; /* Allows scroll if content exceeds */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
     margin: 0 auto; /* Centers horizontally */
+    box-sizing: border-box; /* Include padding in width */
     
 }
 
+.photo-images {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: space-around; /* Space items evenly along the main axis */
+}
+
+.image-container {
+    flex: 0 0 calc(50% - 20px); /* 2 images per row with 20px margin between them */
+    margin-bottom: -10px; /* Vertical margin between rows */
+    padding: 10px; /* Padding around each image */
+}
+
 .photo-image {
-    width: 80%; /* Ensures the image is smaller than the container */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 150px; /* Limits the maximum width to avoid overflowing */
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    header nav {
+        display: none; /* Hide the navigation */
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger menu */
+    }
+
+    .centered-content {
+        padding-top: 100px; /* Add space for fixed header */
+    }
+
+    /* Show the navigation when the hamburger menu is clicked */
+    .show-nav nav {
+        display: block;
+    }
 }
