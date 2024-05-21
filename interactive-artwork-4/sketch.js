@@ -332,16 +332,18 @@ function preload() {
       }
   ];
 
-  
   // Load multiple scream sounds into the screams array
   for (let i = 1; i <= 5; i++) {
-    screams.push(loadSound('sound/long-scream.wav'));
-    screams.push(loadSound('sound/female-scream.wav'));
+    screams.push(loadSound('2-scream-sound/scream1.mp3'));
+    screams.push(loadSound('2-scream-sound/scream2.mp3'));
+    screams.push(loadSound('2-scream-sound/scream3.mp3'));
+    screams.push(loadSound('2-scream-sound/scream4.mp3'));
+    screams.push(loadSound('2-scream-sound/scream5.mp3'));
   }
   
-  drillSound1 = loadSound('sound/drill-1.wav');
-  drillSound2 = loadSound('sound/drill-2.wav');
-  drillSound3 = loadSound('sound/drill-3.wav');
+  drillSound1 = loadSound('1-drill-sound/drill1.mp3');
+  drillSound2 = loadSound('1-drill-sound/drill2.mp3');
+  drillSound3 = loadSound('1-drill-sound/drill3.mp3');
   
 
 
@@ -374,7 +376,7 @@ function setup() {
   }
   
   let allTeethPlacedCorrectly = false;
-  let congratsMessage = "CONGRATULATIONS! YOU DIDN'T MESS UP.";
+  let congratsMessage = "CONGRATULATIONS";
 
   function draw() {
     // Clear the canvas
@@ -422,7 +424,7 @@ function setup() {
       textSize(64);
       fill(255);
       textAlign(CENTER, CENTER);
-      text('YOU KILLED THE PATIENT.', width / 2, height / 2);
+      text('YOU FAILED', width / 2, height / 2);
     }
   }
   
