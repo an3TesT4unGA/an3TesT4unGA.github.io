@@ -1,0 +1,174 @@
+/* General styles for body and HTML */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full viewport height */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px 20px;
+    background-color: rgb(171, 154, 172);
+    color: white;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: rgb(171, 154, 172);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    padding: 10px 20px;
+    background-color: rgb(171, 154, 172);
+    color: white;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: rgb(171, 154, 172);
+}
+
+/* Main background with Flexbox centering */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 60px; /* Space for fixed header */
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Scrollable squares */
+.scrollable-square {
+    background-color: rgba(171, 154, 172, 0.9);
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    overflow: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+/* Art images */
+.art-images img, .photo-images img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgb(171, 154, 172);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .show {
+        display: flex !important;
+    }
+
+    .centered-content {
+        gap: 20px;
+    }
+
+    .scrollable-square {
+        width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
