@@ -5,6 +5,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   img = createImage(width, height);
   generateInitialBranch();
+  background(250);
 }
 
 function draw() {
@@ -41,11 +42,10 @@ function generateNextBranch() {
 
     // Draw branch
     let weight = random(0.5, 2);
-    strokeWeight(weight);
+    strokeWeight(random);
  
-    // Random shade of gray for each branch
-    let gray = int(random(256));
-    stroke(gray);
+    // Random shade of gray for each branchs
+    stroke(0, 20);
 
     line(branch.x, branch.y, newX, newY);
     // Add new branch to the list for further generation

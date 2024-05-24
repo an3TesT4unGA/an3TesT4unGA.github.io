@@ -59,9 +59,9 @@
         <li><a href="https://twitter.com/yourprofile">YOUTUBE</a></li>
 
         <script>
-            // Script to toggle the navigation menu on small screens
             document.querySelector('.hamburger').addEventListener('click', () => {
-                document.querySelector('nav ul').classList.toggle('show');
+                const nav = document.querySelector('nav ul');
+                nav.classList.toggle('show');
             });
         </script>
 

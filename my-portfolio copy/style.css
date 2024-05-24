@@ -3,7 +3,6 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%; /* Full viewport height */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Header styles */
@@ -13,38 +12,55 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    padding: 10px 20px;
-    background-color: rgb(171, 154, 172);
-    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Flexbox for layout */
+    flex-direction: row;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Vertical alignment */
+    height: 60px; /* Consistent height */
+    padding: 10px 20px; /* Spacing */
+    background-color: rgb(171, 154, 172); /* Dark header */
+    color: white; /* White text */
 }
 
 .logo img {
-    width: 50px;
+    width: 50px; /* Adjust this value to control the width of the logo */
     height: auto;
 }
-
 nav ul {
-    list-style: none;
+    list-style: none; /* No bullet points */
+    padding: 50px;
     margin: 0;
-    display: flex;
-    gap: 30px;
+    display: flex; /* Flexbox for horizontal layout */
+    flex-direction: row; /* Ensures horizontal alignment */
+    gap: 60px; /* Space between navigation items */
+}
+
+.clickable-image {
+    transition: transform 0.3s; /* Smooth transition */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+}
+
+/* Scale the image on click (when active) */
+.clickable-image:active {
+    transform: scale(2); /* Enlarges the image by 50% */
+    z-index: 10; /* Ensures it appears above other content */
+    position: absolute; /* Allows it to grow outside the container */
+    top: auto;
+    bottom: auto;
 }
 
 nav a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     font-size: 20px;
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth transition for hover */
 }
 
 nav a:hover {
-    color: rgb(171, 154, 172);
+    color: rgb(171, 154, 172); /* Hover effect */
 }
 
 .hamburger {
@@ -59,46 +75,63 @@ nav a:hover {
 
 /* Footer styles */
 footer {
-    display: flex;
+    display: flex; /* Flexbox for layout */
+    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    height: 60px;
-    padding: 10px 20px;
-    background-color: rgb(171, 154, 172);
-    color: white;
-}
+    align-items: center; /* Vertical alignment */
+    height: 60px; /* Consistent height */
+    padding: 10px 20px; /* Spacing */
+    background-color: rgb(171, 154, 172); /* Dark header */
+    color: white; /* White text */
 
-footer ul {
-    list-style: none;
+    list-style: none; /* No bullet points */
+    padding: 50px;
     margin: 0;
-    display: flex;
-    gap: 30px;
+    display: flex; /* Flexbox for horizontal layout */
+    flex-direction: row; /* Ensures horizontal alignment */
+    gap: 60px; /* Space between navigation items */
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white; /* White text for links */
+    text-decoration: none; /* No underline */
+    transition: color 0.3s; /* Smooth transition for hover */
 }
 
 footer a {
     text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+    color: white; 
 }
 
 footer a:hover {
-    color: rgb(171, 154, 172);
+    transition: color 0.3s; /* Smooth transition for hover */
+    color: rgb(171, 154, 172); /* Hover effect */
+}
+
+p {
+    font-weight: 500;
 }
 
 /* Main background with Flexbox centering */
 .background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-image: url('./images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding-top: 60px; /* Space for fixed header */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    display: flex; /* Flexbox for centering */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: column; /* Vertical stacking */
+    height: calc(100vh - -200px); /* Ensures space for header and footer */
+    background-image: url('./images/background.jpg'); /* Background image */
+    background-size: cover; /* Ensures the image covers the area */
+    background-repeat: no-repeat; /* No repeating */
+    background-position: center; /* Centered image */
+    padding: 20px; /* Additional padding for safety */
 }
 
+/* Centered content with Flexbox */
 .centered-content {
     display: flex;
     flex-direction: column;
@@ -107,29 +140,44 @@ footer a:hover {
     box-sizing: border-box;
 }
 
-/* Scrollable squares */
+/* Scrollable squares with consistent size */
 .scrollable-square {
-    background-color: rgba(171, 154, 172, 0.9);
-    width: 100%;
+    background-color: rgb(171, 154, 172, 0.9); /* Semi-transparent white */
+    width: 100%; /* Fixed width */
     max-width: 800px;
-    padding: 20px;
-    text-align: center;
-    overflow: auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
+    height: 100; /* Fixed height */
+    max-height: 800px;
+    padding: 20px; /* Padding inside the square */
+    text-align: center; /* Centers content within the square */
+    overflow: auto; /* Allows scroll if content exceeds */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin: 0 auto; /* Centers horizontally */
+    box-sizing: border-box; /* Include padding in width */
+    
 }
 
-/* Art images */
-.art-images img, .photo-images img {
-    width: 100%;
-    height: auto;
+.photo-images {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+    justify-content: space-around; /* Space items evenly along the main axis */
+}
+
+.image-container {
+    flex: 0 0 calc(50% - 20px); /* 2 images per row with 20px margin between them */
+    margin-bottom: -10px; /* Vertical margin between rows */
+    padding: 10px; /* Padding around each image */
+}
+
+.photo-image {
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    header nav ul {
-        display: none;
-        flex-direction: column;
+    header nav {
+        display: none; /* Hide the navigation */
+        flex-direction: row;
         gap: 20px;
         background-color: rgb(171, 154, 172);
         position: absolute;
@@ -140,7 +188,7 @@ footer a:hover {
     }
 
     .hamburger {
-        display: block;
+        display: block; /* Show the hamburger menu */
     }
 
     .show {
@@ -157,10 +205,10 @@ footer a:hover {
 }
 
 @media screen and (max-width: 480px) {
-    header {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
+    .header-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     nav ul {
@@ -168,7 +216,13 @@ footer a:hover {
     }
 
     footer {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
+
+    .scrollable-square {
+        width: calc(100% - -20px);
+    }
 }
+
+

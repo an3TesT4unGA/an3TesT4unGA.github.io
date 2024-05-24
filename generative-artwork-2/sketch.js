@@ -2,16 +2,11 @@
 class Particle {
     constructor(x, y) {
       this.position = createVector(x, y);
-      this.velocity = p5.Vector.random2D().mult(random(1, 3)); // Random initial direction and speed
+      this.velocity = p5.Vector.random2D().mult(random(1, 1)); // Random initial direction and speed
       this.acceleration = createVector(0, 0); // No initial acceleration
       this.size = random(1, 1); // Random size for the particles
       this.lifespan = random(10, 400); // Lifespan of the particle
-      this.color = color(
-        random(255),
-        random(255),
-        random(255),
-        150
-      ); // Random semi-transparent color
+      this.color = color(200, 131, 235, 150); // Random semi-transparent color
     }
   
     // Update the particle's position based on its velocity
@@ -54,7 +49,7 @@ class Particle {
   
   function setup() {
     createCanvas(windowWidth, windowHeight); // Use the full window size
-    background(0); // Start with a black background
+    background(5); // Start with a black background
   }
   
   function draw() {

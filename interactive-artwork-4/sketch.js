@@ -352,7 +352,11 @@ function preload() {
 }
 
 function setup() {
-    createCanvas(windowWidth, windowHeight); // Set canvas size
+    createCanvas(2048, 989); // Set canvas size
+  
+      let canvas = createCanvas(2048, 989);
+  canvas.parent('canvas-container'); // Assign canvas to a parent container for CSS positioning
+  noLoop(); // Prevent draw loop if not needed
   
     // Adjust tooth positions based on canvas size
     teeth.forEach((tooth) => {
