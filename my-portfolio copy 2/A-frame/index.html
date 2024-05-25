@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>My A-Frame Scene</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene width="280" height="280" position="0 0 -10">
+    <!-- Other entities in your scene -->
+    <a-entity camera position="0 0 0" rotation="0 0 0" look-controls wasd-controls></a-entity>
+    
+    <!-- Center bright light -->
+  <a-light type="point" color="#ffffff" intensity="2" position="0 0 0"></a-light>
+
+
+    <!-- Your Grease Pencil object -->
+    <a-entity gltf-model="url(object-6/obj1.gltf)" position="0 0 0" scale="80 80 80" animation="property: rotation; to: 0 360 0; loop: true; dur: 40000;"></a-entity>
+    <a-entity gltf-model="url(object-5/obj1.gltf)" position="0 0 0" scale="120 120 120" animation="property: rotation; to: 0 -360 0; loop: true; dur: 30000;"></a-entity>
+    <a-entity gltf-model="url(object-4/obj1.gltf)" position="0 0 0" scale="160 160 160" animation="property: rotation; to: 0 360 0; loop: true; dur: 30000;"></a-entity>
+    <a-entity gltf-model="url(object-3/obj1.gltf)" position="0 0 0" scale="200 200 200" animation="property: rotation; to: 0 -360 0; loop: true; dur: 40000;"></a-entity>
+    <a-entity gltf-model="url(object-2/obj1.gltf)" position="0 0 0" scale="240 240 240" animation="property: rotation; to: 0 360 0; loop: true; dur: 50000;"></a-entity>
+    <a-entity gltf-model="url(object 1/obj1.gltf)" position="0 0 0" scale="280 280 280" animation="property: rotation; to: 0 -360 0; loop: true; dur: 60000;"></a-entity>
+  </a-scene>
+</body>
+</html>
