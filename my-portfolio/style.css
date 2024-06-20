@@ -170,6 +170,11 @@ p {
     height: auto; /* Maintain aspect ratio */
 }
 
+.image-of-me img {
+    width: 100%; /* Make images fill their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
     header nav {
